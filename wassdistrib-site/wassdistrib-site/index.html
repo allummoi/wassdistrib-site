@@ -157,6 +157,7 @@ tr.best td{border-color:var(--jaune)}
 @media (min-width:600px){.grid2{grid-template-columns:1fr 1fr}}
 
 /* contact */
+.mail{display:block;margin-top:8px;font-weight:800;font-size:clamp(18px,3.4vw,24px);color:var(--jaune);text-decoration:none}
 .contact{text-align:center}
 .contact h2{color:var(--jaune)}
 .contact .cta{justify-content:center}
@@ -449,6 +450,7 @@ footer details p{margin-top:10px;max-width:70ch}
         <a class="btn btn-o" href="tel:+33669332659">Appeler</a>
       </div>
       <a class="tel" href="tel:+33669332659">+33 6 69 33 26 59</a>
+      <a class="mail" href="mailto:contact@wassdistrib.fr">contact@wassdistrib.fr</a>
     </div>
   </section>
 </main>
@@ -466,7 +468,7 @@ footer details p{margin-top:10px;max-width:70ch}
     <div class="foot-bot">
       <details>
         <summary>Mentions légales</summary>
-        <p><strong>Éditeur :</strong> Myriam Benaïcha, entrepreneur individuel (WASS DISTRIB), SIREN 933 804 130. Adresse : Montée des Écoles, 01700 Neyron. Téléphone : +33 6 69 33 26 59.</p>
+        <p><strong>Éditeur :</strong> Myriam Benaïcha, entrepreneur individuel (WASS DISTRIB), SIREN 933 804 130. Adresse : Montée des Écoles, 01700 Neyron. Téléphone : +33 6 69 33 26 59. E-mail : contact@wassdistrib.fr.</p>
         <p><strong>Hébergeur :</strong> Netlify, Inc., 101 2nd Street, Suite 575, San Francisco, CA 94105, États-Unis — netlify.com.</p>
         <p><strong>Produit :</strong> ALLUM’MOI, fabriqué en RPC.</p>
         <p><strong>Données personnelles :</strong> les informations envoyées par le formulaire servent uniquement à répondre à votre demande de tarifs. Vous pouvez demander leur suppression au +33 6 69 33 26 59. Ce site n’utilise pas de cookies publicitaires.</p>
@@ -530,7 +532,7 @@ f.addEventListener('submit',async e=>{
     const r=await fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()});
     if(!r.ok)throw 0;
     f.reset();FX.chime();msg.className='fmsg ok';msg.textContent='Demande envoyée. Vous recevrez la grille tarifaire après vérification de votre SIRET.';
-  }catch(_){FX.buzz();msg.className='fmsg err';msg.textContent='L’envoi n’a pas abouti. Écrivez-nous sur WhatsApp au +33 6 69 33 26 59.'}
+  }catch(_){FX.buzz();msg.className='fmsg err';msg.textContent='L’envoi n’a pas abouti. Écrivez-nous à contact@wassdistrib.fr ou sur WhatsApp au +33 6 69 33 26 59.'}
 });
 
 {
